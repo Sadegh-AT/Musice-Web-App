@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tailwind-watch": "npx tailwindcss -i ./source/css/input.css -o ./source/css/main.css --watch",
+    "tailwind-watch": "npx tailwindcss -i ./src/css/input.css -o ./src/css/main.css --watch",
     "build": "webpack"
   },
   "keywords": [],
@@ -20,12 +20,10 @@
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.2",
-    "nodemon": "^2.0.20",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.2.7",
     "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
-  },
-  "dependencies": {}
+  }
 }

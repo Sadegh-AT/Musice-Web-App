@@ -517,10 +517,6 @@ video {
   display: flex;
 }
 
-.h-\[100vh\] {
-  height: 100vh;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -538,19 +534,6 @@ video {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-\[3rem\] {
-  font-size: 3rem;
-}
-
-.text-\[6rem\] {
-  font-size: 6rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -558,10 +541,6 @@ video {
 .text-emerald-300 {
   --tw-text-opacity: 1;
   color: rgb(110 231 183 / var(--tw-text-opacity));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .hover\:text-emerald-200:hover {

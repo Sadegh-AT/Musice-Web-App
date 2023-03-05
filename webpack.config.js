@@ -56,13 +56,13 @@ module.exports = {
     ],
   },
   optimization: {
-    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()], //use css minimizer
+    minimizer: [new TerserPlugin()], //use css minimizer
     minimize: true,
   },
   plugins: [
     // We must create this plugin for each html page
     new HtmlWebpackPlugin({
-      title: "My Irancell Panel", //title of html files
+      title: "Music App", //title of html files
       filename: "index.html", //name of html files
       template: "./src/index.html", // location of html files
       chunks: ["bundle"], //Determines which html page each javascript file is for (The location of the js files is presented in the order of their writing)
