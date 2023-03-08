@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Document</title>
 </head>
 
-<body class="bg-green-600 flex justify-center items-center">
+<body class="flex h-[100vh] justify-center overflow-hidden">
+    <div class="container bg-[#262626]">
+        <header class="relative flex h-[20rem] flex-col items-start p-4">
+            <h1
+                class="l z-10 max-w-[55%] font-[outfit] text-[2.6rem] font-extrabold leading-tight text-white drop-shadow-md">
+                DARK SOULS TRILOGY BOX
+            </h1>
+            <h2 class="z-10 text-white underline">Yuka Kitamura</h2>
 
-    <h1 class="text font-bold text-emerald-300 hover:text-emerald-200 cursor-pointer">
-        Hello world!
-    </h1>
+            <div class="z-10 mt-8 flex items-center justify-center">
+                <div
+                    class="z-10 flex h-[3.2rem] w-[3.2rem] cursor-pointer items-center justify-center rounded-[50%] bg-[#262626] text-[1.4rem] text-[#F58706] hover:text-[#FE971F]">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <span class="z-10 ml-4 text-[1.2rem] font-light text-white">6h 14m</span>
+            </div>
 
+            <div class="absolute top-0 left-0 z-0 h-[100%] w-[100%] bg-gradient-to-t from-[#262626] to-transparent">
+            </div>
+        </header>
+    </div>
 
+    <script src="./js/fonticon.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 
 </html>

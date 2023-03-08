@@ -1,7 +1,12 @@
 @font-face {
-  font-family: "Outfit";
+  font-family: "outfit";
   src: url("../font/Outfit-Regular.ttf");
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+header {
+  background-image: url("../image/ds3_thumb_brand_624x468\ 1.jpg");
+  background-size: cover;
+}
