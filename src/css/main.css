@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Outfit";
+
+  src: url("../font/Outfit-Regular.ttf");
+}
+
 /*
 ! tailwindcss v3.2.7 | MIT License | https://tailwindcss.com
 */
@@ -513,37 +519,57 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .flex {
   display: flex;
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
-.items-center {
-  align-items: center;
+.h-\[100vh\] {
+  height: 100vh;
 }
 
 .justify-center {
   justify-content: center;
 }
 
-.bg-green-600 {
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.bg-\[\#262626\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.text-emerald-300 {
-  --tw-text-opacity: 1;
-  color: rgb(110 231 183 / var(--tw-text-opacity));
-}
-
-.hover\:text-emerald-200:hover {
-  --tw-text-opacity: 1;
-  color: rgb(167 243 208 / var(--tw-text-opacity));
+  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
 }

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("../font/Outfit-Regular.ttf");
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
