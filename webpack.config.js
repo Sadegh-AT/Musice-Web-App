@@ -11,6 +11,7 @@ module.exports = {
   entry: {
     // path of each js files
     bundle: "./src/js/app.js",
+    icon: "./src/js/fonticon.js",
   },
   output: {
     // output after build project
@@ -65,7 +66,7 @@ module.exports = {
       title: "Music App", //title of html files
       filename: "index.html", //name of html files
       template: "./src/index.html", // location of html files
-      chunks: ["bundle"], //Determines which html page each javascript file is for (The location of the js files is presented in the order of their writing)
+      chunks: ["icon", "bundle"], //Determines which html page each javascript file is for (The location of the js files is presented in the order of their writing)
     }),
 
     //Removes duplicate files during build
