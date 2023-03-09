@@ -30,20 +30,34 @@
             </div>
         </header>
         <main>
-            <section class="flex  pt-8 px-4">
-                <div
-                    class="flex justify-between w-full border-b-2 border-solid border-[#454545]  text-white opacity-40 px-4 pb-2">
-                    <div class="flex  space-x-7">
-                        <h6>CD</h6>
-                        <h6>#</h6>
-                        <h6>Name</h6>
-                    </div>
-                    <div class="flex  space-x-7">
-                        <h6>Time</h6>
-                        <h6>MP3</h6>
-                        <h6>FLAC</h6>
-                    </div>
-                </div>
+            <section class="px-4 pt-8">
+                <table class="flex w-full flex-col">
+                    <thead
+                        class="flex w-full justify-between border-b-2 border-solid border-[#454545] pb-2 text-white opacity-40 mb-6">
+                        <tr class="flex space-x-7">
+                            <th class="font-light">CD</th>
+                            <th class="font-light">#</th>
+                            <th class="font-light">Name</th>
+                        </tr>
+                        <tr class="flex space-x-16">
+                            <th class="font-light">Time</th>
+                            <th class="font-light">MP3</th>
+                            <th class="font-light">FLAC</th>
+                        </tr>
+                    </thead>
+                    <tbody class="w-full flex justify-between ">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Prologue</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>3:45</td>
+                            <td>6.66 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </main>
     </div>
