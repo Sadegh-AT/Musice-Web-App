@@ -642,6 +642,22 @@ video {
   max-width: 55%;
 }
 
+.max-w-\[40\] {
+  max-width: 40;
+}
+
+.max-w-\[40rem\] {
+  max-width: 40rem;
+}
+
+.max-w-\[45rem\] {
+  max-width: 45rem;
+}
+
+.max-w-\[50rem\] {
+  max-width: 50rem;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -789,6 +805,11 @@ video {
 .bg-\[\#262626\] {
   --tw-bg-opacity: 1;
   background-color: rgb(38 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#1f1f1f\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 31 31 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-t {
