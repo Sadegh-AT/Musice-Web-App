@@ -2,6 +2,26 @@
   font-family: "outfit";
   src: url("../font/Outfit-Regular.ttf");
 }
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #8f54a0 #ffffff00;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+  padding: 1rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3d3d3d;
+
+  border-radius: 10px;
+  border: 3px solid #ffffff00;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
