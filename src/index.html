@@ -10,7 +10,7 @@
 </head>
 
 <body class="flex h-[100vh] justify-center overflow-hidden bg-[#1f1f1f]">
-    <div class="container bg-[#262626] max-w-[50rem]">
+    <div class="container bg-[#262626] max-w-[50rem] h-[100vh] overflow-hidden">
         <header class="relative flex h-[20rem] flex-col items-start p-4 ">
             <h1
                 class="l z-10 max-w-[55%] font-[outfit] text-[2.6rem] font-extrabold leading-tight text-white drop-shadow-md">
@@ -29,8 +29,8 @@
             <div class="absolute top-0 left-0 z-0 h-[100%] w-[100%] bg-gradient-to-t from-[#262626] to-transparent">
             </div>
         </header>
-        <main>
-            <section class="px-4 pt-8">
+        <main class="flex flex-col justify-between ">
+            <section class="px-4 pt-8 relative">
                 <table class="flex w-full flex-col">
                     <thead
                         class="flex w-full justify-between border-b-2 border-solid border-[#454545] pb-2 text-white opacity-40 mb-6">
@@ -61,6 +61,7 @@
                             <td>17.92 MB</td>
                         </tr>
                     </tbody>
+
                     <tbody
                         class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
                         <tr class="flex space-x-7 ">
@@ -74,6 +75,7 @@
                             <td>17.92 MB</td>
                         </tr>
                     </tbody>
+
                     <tbody
                         class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
                         <tr class="flex space-x-7 ">
@@ -89,7 +91,21 @@
                     </tbody>
                     <!-- Music Track -->
                 </table>
+                <div class=" bg-[#1f1f1f] w-full h-12 rounded-lg shadow-xl flex items-center justify-between px-4">
+                    <span class="text-[#fe971f] cursor-pointer border-r-2 pr-2 border-[#404040]"><i
+                            class="fa-solid fa-play"></i></span>
+                    <div class="flex items-center justify-between w-full px-6">
+                        <span class="text-white opacity-60 mr-4">00:00</span>
+                        <div class=" h-1 bg-[#404040] w-full cursor-pointer overflow-hidden rounded-sm">
+                            <div class="w-[30%] h-full bg-[#fe971f]"></div>
+                        </div>
+                        <span class="text-white opacity-60 ml-4">00:00</span>
+                    </div>
+                    <span class="text-[#fe971f] cursor-pointer border-l-2 pl-2 border-[#404040]"><i
+                            class="fa-solid fa-volume-high"></i></span>
+                </div>
             </section>
+
         </main>
     </div>
 
