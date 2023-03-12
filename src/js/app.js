@@ -1,11 +1,12 @@
+const darkmodeBtn = document.querySelector("#darkmodeBtn");
+SetDarkorLight();
+Darkmode(darkmodeBtn);
 function Darkmode(darkmode) {
   darkmode.addEventListener("click", function () {
     if (localStorage.getItem("color-theme") != "dark") {
       localStorage.setItem("color-theme", "dark");
-      darkmode.innerHTML = "Light";
     } else {
       localStorage.setItem("color-theme", "light");
-      darkmode.innerHTML = "Dark";
     }
     SetDarkorLight();
   });
