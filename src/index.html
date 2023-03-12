@@ -10,7 +10,8 @@
 </head>
 
 <body class="flex h-[100vh] justify-center overflow-hidden bg-[#1f1f1f]">
-    <div class="container bg-[#262626] max-w-[50rem] max-h-[100vh] flex flex-col justify-start ">
+    <div
+        class="container bg-[#262626] max-w-[50rem] max-h-[100vh] flex flex-col justify-start overflow-y-auto overflow-x-hidden">
         <header class="relative flex h-[20rem] flex-col items-start p-4  ">
             <h1
                 class="l z-10 max-w-[55%] min-w-[20rem] font-[outfit] text-[2.6rem] font-extrabold leading-tight text-white drop-shadow-md">
@@ -30,325 +31,287 @@
             </div>
         </header>
         <main class="flex flex-col justify-start h-[100%]">
-            <section class="px-4 pt-8 relative flex flex-col justify-start pb-8  ">
-                <div class=" max-h-[90%] overflow-y-auto overflow-x-hidden">
-                    <table class="flex w-full flex-col max-h-[38rem] px-4">
-                        <thead
-                            class="flex w-full justify-between border-b-2 border-solid border-[#454545] pb-2 text-white opacity-40 mb-6">
-                            <tr class="flex space-x-7">
-                                <th class="font-light">CD</th>
-                                <th class="font-light">#</th>
-                                <th class="font-light">Name</th>
-                            </tr>
-                            <tr class="flex space-x-16">
-                                <th class="font-light">Time</th>
-                                <th class="font-light">MP3</th>
-                                <th class="font-light">FLAC</th>
-                            </tr>
-                        </thead>
+            <section class="px-4 pt-8 relative flex flex-col justify-start pb-8 ">
 
-                        <!-- Music Track -->
+                <table class="flex w-full flex-col  px-4">
+                    <thead
+                        class="flex w-full justify-between border-b-2 border-solid border-[#454545] pb-2 text-white opacity-40 mb-6">
+                        <tr class="flex space-x-7">
+                            <th class="font-light">CD</th>
+                            <th class="font-light">#</th>
+                            <th class="font-light">Name</th>
+                        </tr>
+                        <tr class="flex space-x-16">
+                            <th class="font-light">Time</th>
+                            <th class="font-light">MP3</th>
+                            <th class="font-light">FLAC</th>
+                        </tr>
+                    </thead>
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
+                    <!-- Music Track -->
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>2</td>
-                                <td>Firelink Shrine</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>2:57</td>
-                                <td>4.98 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>3</td>
-                                <td>Taurus Demon</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>2:40</td>
-                                <td>5.39 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Prologue</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>3:45</td>
+                            <td>6.66 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Prologue</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>3:45</td>
+                            <td>6.66 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Prologue</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>3:45</td>
+                            <td>6.66 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Prologue</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>3:45</td>
+                            <td>6.66 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Prologue</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>3:45</td>
+                            <td>6.66 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>2</td>
-                                <td>Firelink Shrine</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>2:57</td>
-                                <td>4.98 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>Firelink Shrine</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>2:57</td>
+                            <td>4.98 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>3</td>
-                                <td>Taurus Demon</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>2:40</td>
-                                <td>5.39 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>3</td>
+                            <td>Taurus Demon</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>2:40</td>
+                            <td>5.39 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Prologue</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>3:45</td>
+                            <td>6.66 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>2</td>
-                                <td>Firelink Shrine</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>2:57</td>
-                                <td>4.98 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>Firelink Shrine</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>2:57</td>
+                            <td>4.98 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>3</td>
-                                <td>Taurus Demon</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>2:40</td>
-                                <td>5.39 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>3</td>
+                            <td>Taurus Demon</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>2:40</td>
+                            <td>5.39 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Prologue</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>3:45</td>
+                            <td>6.66 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>2</td>
-                                <td>Firelink Shrine</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>2:57</td>
-                                <td>4.98 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>Firelink Shrine</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>2:57</td>
+                            <td>4.98 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>3</td>
-                                <td>Taurus Demon</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>2:40</td>
-                                <td>5.39 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>1</td>
-                                <td>Prologue</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>3:45</td>
-                                <td>6.66 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>3</td>
+                            <td>Taurus Demon</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>2:40</td>
+                            <td>5.39 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Prologue</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>3:45</td>
+                            <td>6.66 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>2</td>
-                                <td>Firelink Shrine</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>2:57</td>
-                                <td>4.98 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>Firelink Shrine</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>2:57</td>
+                            <td>4.98 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
 
-                        <tbody
-                            class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
-                            <tr class="flex space-x-7 ">
-                                <td>1</td>
-                                <td>3</td>
-                                <td>Taurus Demon</td>
-                            </tr>
-                            <tr class="flex space-x-8 ">
-                                <td>2:40</td>
-                                <td>5.39 MB</td>
-                                <td>17.92 MB</td>
-                            </tr>
-                        </tbody>
-                        <!-- Music Track -->
-                    </table>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>3</td>
+                            <td>Taurus Demon</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>2:40</td>
+                            <td>5.39 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>Prologue</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>3:45</td>
+                            <td>6.66 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
 
-                </div>
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>2</td>
+                            <td>Firelink Shrine</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>2:57</td>
+                            <td>4.98 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+
+                    <tbody
+                        class="mb-4 w-full flex justify-between border-2 border-[#404040] p-2 rounded-lg text-white opacity-80 cursor-pointer transition-all hover:bg-[#3e3e3e]">
+                        <tr class="flex space-x-7 ">
+                            <td>1</td>
+                            <td>3</td>
+                            <td>Taurus Demon</td>
+                        </tr>
+                        <tr class="flex space-x-8 ">
+                            <td>2:40</td>
+                            <td>5.39 MB</td>
+                            <td>17.92 MB</td>
+                        </tr>
+                    </tbody>
+                    <!-- Music Track -->
+                </table>
+
+
 
                 <div class=" bg-[#1f1f1f] w-full my-4 h-12 rounded-lg shadow-xl flex items-center justify-between px-4">
                     <span class="text-[#fe971f] cursor-pointer border-r-2 pr-2 border-[#404040]"><i
