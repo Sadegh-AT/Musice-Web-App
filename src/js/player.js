@@ -1,4 +1,5 @@
 const audioPlayer = document.getElementById("audio-player");
+
 const playBtn = document.getElementById("play");
 
 const timeElapsed = document.getElementById("time-elapsed");
@@ -10,12 +11,18 @@ playBtn.addEventListener("click", function () {
   playAndPause();
 });
 
+playerTrack.addEventListener("change", function () {
+  console.log(playerTrack.value);
+  playerTrack.value = playerTrack.value;
+  playerTrack.max = Math.round(audioPlayer.duration);
+  audioPlayer.currentTime = playerTrack.value;
+});
+
 audioPlayer.addEventListener("timeupdate", function () {
+  playerTrack.value = audioPlayer.currentTime;
+  playerTrack.max = Math.round(audioPlayer.duration);
   const currentTime = audioPlayer.currentTime;
   const duration = audioPlayer.duration;
-  const progressPercent = (currentTime / duration) * 100;
-
-  playerTrack.value = progressPercent;
   timeElapsed.innerHTML = formatTime(currentTime);
   songDuration.innerHTML = formatTime(duration);
 });
