@@ -39,9 +39,11 @@
         </header>
         <main class="flex h-[100%] flex-col justify-start">
             <section class="relative flex flex-col justify-start px-4 pt-8 pb-8">
+
                 <div
                     class="sticky dark:bg-[#E7E6E6] top-2 z-10 my-4 mb-8 flex h-12 w-full items-center justify-between rounded-lg bg-[#1f1f1f] px-4 shadow-xl">
-                    <span
+                    <audio src="./music/01 Believe.flac"></audio>
+                    <span id="play"
                         class="cursor-pointer border-r-2 dark:border-[#D2D2D2] border-[#404040] pr-2 text-[#fe971f]"><i
                             class="fa-solid fa-play"></i></span>
                     <div class="flex w-full items-center justify-between px-6">
@@ -52,7 +54,7 @@
                         </div>
                         <span class="ml-4 text-white dark:text-[#282828] opacity-60">00:00</span>
                     </div>
-                    <span
+                    <span id="volume"
                         class="cursor-pointer border-l-2 border-[#404040] pl-2 dark:border-[#D2D2D2] text-[#fe971f]"><i
                             class="fa-solid fa-volume-high"></i></span>
                 </div>
@@ -96,6 +98,7 @@
 
     <script src="./js/fonticon.js"></script>
     <script src="./js/musictarck.js"></script>
+    <script src="./js/player.js"></script>
     <script src="./js/app.js"></script>
 </body>
 
