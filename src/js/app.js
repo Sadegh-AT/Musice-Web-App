@@ -41,7 +41,6 @@ new MusicTrack(musicTable, [
 
 function selectMusic(element) {
   const name = element.querySelector(".musicName");
-  console.log(`./music/${name.innerHTML}`);
   audioPlayer.src = `./music/${name.innerHTML + ".mp3"}`;
   playAndPause();
 }

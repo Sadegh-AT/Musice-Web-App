@@ -28,7 +28,7 @@ audioPlayer.addEventListener("loadedmetadata", function () {
   playerTrack.max = duration;
 
   volumeRange.value = Number(localStorage.getItem("music-volume"));
-  console.log("sad");
+
   audioPlayer.volume = Number(localStorage.getItem("music-volume"));
 });
 
