@@ -7,14 +7,28 @@ const songDuration = document.getElementById("song-duration");
 
 const playerTrack = document.getElementById("player-track");
 
+const volumeBtn = document.getElementById("volume");
+const volumeRange = document.getElementById("volume-range");
+
+volumeBtn.addEventListener("click", function () {
+  volumeRange.classList.toggle("hidden");
+});
+
+volumeRange.addEventListener("input", function () {
+  audioPlayer.volume = volumeRange.value;
+});
+
+audioPlayer.addEventListener("loadedmetadata", function () {
+  const duration = Math.round(audioPlayer.duration);
+  playerTrack.max = duration;
+  audioPlayer.volume = volumeRange.value;
+});
+
 playBtn.addEventListener("click", function () {
   playAndPause();
 });
 
 playerTrack.addEventListener("change", function () {
-  console.log(playerTrack.value);
-  playerTrack.value = playerTrack.value;
-  playerTrack.max = Math.round(audioPlayer.duration);
   audioPlayer.currentTime = playerTrack.value;
 });
 
@@ -27,14 +41,29 @@ audioPlayer.addEventListener("timeupdate", function () {
   songDuration.innerHTML = formatTime(duration);
 });
 
+audioPlayer.addEventListener("ended", function () {
+  console.log("end");
+  playBtn.dataset.isplay = "true";
+  playAndPause();
+
+  playerTrack.value = 0;
+  playerTrack.max = Math.round(audioPlayer.duration);
+  const currentTime = audioPlayer.currentTime;
+  const duration = audioPlayer.duration;
+  timeElapsed.innerHTML = formatTime(currentTime);
+  songDuration.innerHTML = formatTime(duration);
+});
+
 function playAndPause() {
   const btnIcon = playBtn.querySelector("i");
-  if (btnIcon.className == "fa-solid fa-play") {
+  if (playBtn.dataset.isplay == "false") {
     btnIcon.className = "fa-solid fa-pause";
     audioPlayer.play();
-  } else {
+    playBtn.dataset.isplay = "true";
+  } else if (playBtn.dataset.isplay == "true") {
     btnIcon.className = "fa-solid fa-play";
     audioPlayer.pause();
+    playBtn.dataset.isplay = "false";
   }
 }
 
