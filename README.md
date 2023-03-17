@@ -6,9 +6,8 @@ This website lets you download and play the Dark Souls soundtrack. It has two mo
 
 ## Technology
 
+🔸Tailwind
 
-🔸Tailwind
-🔸Tailwind
 ## Demo
 
 ![Project Demo](https://github.com/Sadegh-AT/Musice-Web-App/blob/master/demo.png)
