@@ -17,11 +17,16 @@ volumeBtn.addEventListener("click", function () {
 volumeRange.addEventListener("input", function () {
   audioPlayer.volume = volumeRange.value;
 });
+volumeRange.addEventListener("change", function () {
+  localStorage.setItem("music-volume", volumeRange.value);
+});
 
 audioPlayer.addEventListener("loadedmetadata", function () {
   const duration = Math.round(audioPlayer.duration);
   playerTrack.max = duration;
-  audioPlayer.volume = volumeRange.value;
+
+  volumeRange.value = Number(localStorage.getItem("music-volume"));
+  audioPlayer.volume = Number(localStorage.getItem("music-volume"));
 });
 
 playBtn.addEventListener("click", function () {
@@ -42,7 +47,6 @@ audioPlayer.addEventListener("timeupdate", function () {
 });
 
 audioPlayer.addEventListener("ended", function () {
-  console.log("end");
   playBtn.dataset.isplay = "true";
   playAndPause();
 
