@@ -10,6 +10,8 @@ const playerTrack = document.getElementById("player-track");
 const volumeBtn = document.getElementById("volume");
 const volumeRange = document.getElementById("volume-range");
 
+volumeRange.value = Number(localStorage.getItem("music-volume"));
+
 volumeBtn.addEventListener("click", function () {
   volumeRange.classList.toggle("hidden");
 });
@@ -26,6 +28,7 @@ audioPlayer.addEventListener("loadedmetadata", function () {
   playerTrack.max = duration;
 
   volumeRange.value = Number(localStorage.getItem("music-volume"));
+  console.log("sad");
   audioPlayer.volume = Number(localStorage.getItem("music-volume"));
 });
 
