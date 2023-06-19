@@ -43,4 +43,5 @@ function selectMusic(element) {
   const name = element.querySelector(".musicName");
   audioPlayer.src = `./music/${name.innerHTML + ".mp3"}`;
   playAndPause();
+  playAndPause();
 }
