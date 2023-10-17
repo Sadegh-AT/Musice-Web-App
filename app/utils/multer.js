@@ -2,6 +2,7 @@ const multer = require("multer");
 
 const path = require("path");
 const fs = require("fs");
+const createError = require("http-errors");
 
 function createRoute(req) {
   const directory = path.join(__dirname, "..", "..", "uploads", "music");
@@ -9,7 +10,21 @@ function createRoute(req) {
   fs.mkdirSync(directory, { recursive: true });
   return directory;
 }
+const fileFilter = (req, file, cb) => {
+  // Allowed audio file types
+  const allowedMimeTypes = ["audio/mpeg", "audio/wav", "audio/x-m4a"];
 
+  if (allowedMimeTypes.includes(file.mimetype)) {
+    cb(null, true);
+  } else {
+    cb(
+      createError.BadRequest(
+        "Invalid file type. Only MP3, WAV, and M4A files are allowed."
+      ),
+      false
+    );
+  }
+};
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const filePath = createRoute(req);
@@ -21,7 +36,7 @@ const storage = multer.diskStorage({
     const month = (date.getMonth() + 1).toString();
     const day = date.getDate().toString();
     const ext = path.extname(file.originalname);
-
+    console.log(file);
     const basename = path.parse(file.originalname).name;
     const fileName = `${basename}-${year}-${month}-${day}-${new Date().getTime()}${ext}`;
     req.body.fileName = fileName;
@@ -29,6 +44,6 @@ const storage = multer.diskStorage({
   },
 });
 
-const uploadFile = multer({ storage });
+const uploadFile = multer({ storage, fileFilter });
 
 module.exports = uploadFile;

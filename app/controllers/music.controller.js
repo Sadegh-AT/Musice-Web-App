@@ -13,7 +13,14 @@ async function createMusic(req, res, next) {
     next(error);
   }
 }
-async function getAllMusic(req, res, next) {}
+async function getAllMusic(req, res, next) {
+  try {
+    const musics = await MusicModel.find({}, { __v: 0 });
+    res.send(musics);
+  } catch (error) {
+    next(error);
+  }
+}
 async function editMusic(req, res, next) {}
 
 module.exports = {
