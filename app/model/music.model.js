@@ -6,8 +6,8 @@ const Schema = new mongoose.Schema({
   musicPath: { type: String, required: true, default: "" },
 });
 
-const MovieModel = mongoose.model("musics", Schema);
+const MusicModel = mongoose.model("musics", Schema);
 
 module.exports = {
-  MovieModel,
+    MusicModel,
 };
