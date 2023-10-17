@@ -3,9 +3,10 @@ const path = require("path");
 const { MusicModel } = require("../model/music.model");
 async function createMusic(req, res, next) {
   try {
-    const { title, fileUploadPath, fileName, time } = req.body;
+    const { title, fileUploadPath, fileName, time, size } = req.body;
     await MusicModel.create({
       title,
+      size,
       musicPath: path.join(fileUploadPath, fileName),
     });
     res.send({ message: "Added music 👍" });

@@ -32,16 +32,10 @@ function SetDarkorLight() {
 
 const musicTable = document.querySelector("#music-table");
 
-new MusicTrack(musicTable, [
-  "Prologue",
-  "Firelink Shrine",
-  "Taurus Demon",
-  "Bell Gargoyle",
-]);
+new MusicTrack(musicTable);
 
 function selectMusic(element) {
-  const name = element.querySelector(".musicName");
-  audioPlayer.src = `./music/${name.innerHTML + ".mp3"}`;
-  playAndPause();
+  // console.log(element.dataset.src);
+  audioPlayer.src = `../${element.dataset.src}`;
   playAndPause();
 }

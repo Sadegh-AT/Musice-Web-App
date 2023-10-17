@@ -61,15 +61,15 @@ audioPlayer.addEventListener("ended", function () {
   songDuration.innerHTML = formatTime(duration);
 });
 
-function playAndPause() {
+async function playAndPause() {
   const btnIcon = playBtn.querySelector("i");
   if (playBtn.dataset.isplay == "false") {
     btnIcon.className = "fa-solid fa-pause";
-    audioPlayer.play();
+    await audioPlayer.play();
     playBtn.dataset.isplay = "true";
   } else if (playBtn.dataset.isplay == "true") {
     btnIcon.className = "fa-solid fa-play";
-    audioPlayer.pause();
+    await audioPlayer.pause();
     playBtn.dataset.isplay = "false";
   }
 }

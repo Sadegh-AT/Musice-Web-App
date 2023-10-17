@@ -5,7 +5,14 @@ const fs = require("fs");
 const createError = require("http-errors");
 
 function createRoute(req) {
-  const directory = path.join(__dirname, "..", "..", "uploads", "music");
+  const directory = path.join(
+    __dirname,
+    "..",
+    "..",
+    "public",
+    "uploads",
+    "music"
+  );
   req.body.fileUploadPath = path.join("uploads", "music");
   fs.mkdirSync(directory, { recursive: true });
   return directory;
@@ -36,7 +43,7 @@ const storage = multer.diskStorage({
     const month = (date.getMonth() + 1).toString();
     const day = date.getDate().toString();
     const ext = path.extname(file.originalname);
-    console.log(file);
+
     const basename = path.parse(file.originalname).name;
     const fileName = `${basename}-${year}-${month}-${day}-${new Date().getTime()}${ext}`;
     req.body.fileName = fileName;
