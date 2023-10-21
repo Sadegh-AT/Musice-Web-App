@@ -31,7 +31,7 @@ html.dark *::-webkit-scrollbar-thumb {
 }
 
 /*
-! tailwindcss v3.2.7 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -63,6 +63,7 @@ html.dark *::-webkit-scrollbar-thumb {
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
 */
 
 html {
@@ -79,6 +80,8 @@ html {
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
 }
 
 /*
@@ -219,6 +222,10 @@ optgroup,
 select,
 textarea {
   font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -371,6 +378,14 @@ menu {
 }
 
 /*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
 Prevent resizing textareas horizontally by default.
 */
 
@@ -465,6 +480,9 @@ video {
   --tw-pan-y:  ;
   --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
   --tw-ordinal:  ;
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
@@ -512,6 +530,9 @@ video {
   --tw-pan-y:  ;
   --tw-pinch-zoom:  ;
   --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
   --tw-ordinal:  ;
   --tw-slashed-zero:  ;
   --tw-numeric-figure:  ;
@@ -591,6 +612,14 @@ video {
   position: sticky;
 }
 
+.-right-\[3\.2rem\] {
+  right: -3.2rem;
+}
+
+.-top-\[5rem\] {
+  top: -5rem;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -609,62 +638,6 @@ video {
 
 .top-4 {
   top: 1rem;
-}
-
-.top-\[50\%\] {
-  top: 50%;
-}
-
-.-top-1\/2 {
-  top: -50%;
-}
-
-.-left-1\/2 {
-  left: -50%;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
-.-top-10 {
-  top: -2.5rem;
-}
-
-.-top-\[10rem\] {
-  top: -10rem;
-}
-
-.-top-\[5rem\] {
-  top: -5rem;
-}
-
-.left-2 {
-  left: 0.5rem;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.-right-0 {
-  right: -0px;
-}
-
-.-right-\[5rem\] {
-  right: -5rem;
-}
-
-.-right-\[3rem\] {
-  right: -3rem;
-}
-
-.-right-\[3\.1rem\] {
-  right: -3.1rem;
-}
-
-.-right-\[3\.2rem\] {
-  right: -3.2rem;
 }
 
 .z-0 {
@@ -774,11 +747,6 @@ video {
 
 .max-w-\[55\%\] {
   max-width: 55%;
-}
-
-.rotate-90 {
-  --tw-rotate: 90deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-rotate-90 {
@@ -915,13 +883,13 @@ video {
 }
 
 .from-\[\#262626\] {
-  --tw-gradient-from: #262626;
-  --tw-gradient-to: rgb(38 38 38 / 0);
+  --tw-gradient-from: #262626 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(38 38 38 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .to-transparent {
-  --tw-gradient-to: transparent;
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
 .p-2 {
@@ -1054,6 +1022,15 @@ header {
   background-color: red;
 }
 
+.delBtn {
+  transition: all 0.2s ease-in-out;
+}
+
+.delBtn:hover {
+  scale: 1.2;
+  color: rgb(231, 52, 52);
+}
+
 .hover\:rounded-2xl:hover {
   border-radius: 1rem;
 }
@@ -1068,58 +1045,58 @@ header {
   color: rgb(254 151 31 / var(--tw-text-opacity));
 }
 
-.dark .dark\:border-\[\#D2D2D2\] {
+:is(.dark .dark\:border-\[\#D2D2D2\]) {
   --tw-border-opacity: 1;
   border-color: rgb(210 210 210 / var(--tw-border-opacity));
 }
 
-.dark .dark\:bg-\[\#E7E6E6\] {
+:is(.dark .dark\:bg-\[\#E7E6E6\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(231 230 230 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-\[\#F3F3F3\] {
+:is(.dark .dark\:bg-\[\#F3F3F3\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-\[\#e4e4e4\] {
+:is(.dark .dark\:bg-\[\#e4e4e4\]) {
   --tw-bg-opacity: 1;
   background-color: rgb(228 228 228 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:from-\[\#f3f3f3\] {
-  --tw-gradient-from: #f3f3f3;
-  --tw-gradient-to: rgb(243 243 243 / 0);
+:is(.dark .dark\:from-\[\#f3f3f3\]) {
+  --tw-gradient-from: #f3f3f3 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(243 243 243 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.dark .dark\:text-\[\#0C0C0C\] {
+:is(.dark .dark\:text-\[\#0C0C0C\]) {
   --tw-text-opacity: 1;
   color: rgb(12 12 12 / var(--tw-text-opacity));
 }
 
-.dark .dark\:text-\[\#282828\] {
+:is(.dark .dark\:text-\[\#282828\]) {
   --tw-text-opacity: 1;
   color: rgb(40 40 40 / var(--tw-text-opacity));
 }
 
-.dark .dark\:text-\[\#2e2e2e\] {
+:is(.dark .dark\:text-\[\#2e2e2e\]) {
   --tw-text-opacity: 1;
   color: rgb(46 46 46 / var(--tw-text-opacity));
 }
 
-.dark .dark\:opacity-75 {
+:is(.dark .dark\:opacity-75) {
   opacity: 0.75;
 }
 
-.dark .dark\:shadow-md {
+:is(.dark .dark\:shadow-md) {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.dark .dark\:hover\:bg-\[\#d4d4d4\]:hover {
+:is(.dark .dark\:hover\:bg-\[\#d4d4d4\]:hover) {
   --tw-bg-opacity: 1;
   background-color: rgb(212 212 212 / var(--tw-bg-opacity));
 }

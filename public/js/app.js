@@ -1,5 +1,6 @@
 const darkmodeBtn = document.querySelector("#darkmodeBtn");
 const fonticon = darkmodeBtn.querySelector("span");
+
 SetDarkorLight();
 Darkmode(darkmodeBtn);
 function Darkmode(darkmode) {
@@ -32,7 +33,21 @@ function SetDarkorLight() {
 
 const musicTable = document.querySelector("#music-table");
 
-new MusicTrack(musicTable);
+addTrack(musicTable).then(() => {
+  const deleteBtn = document.querySelectorAll(".delBtn");
+  deleteBtn.forEach((item) =>
+    item.addEventListener("click", async function () {
+      const res = await fetch(
+        `http://localhost:3000/music/delete/${item.dataset.id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      const message = await res.json();
+      console.log(message);
+    })
+  );
+});
 
 function selectMusic(element) {
   // console.log(element.dataset.src);

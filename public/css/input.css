@@ -40,3 +40,10 @@ header {
 #player-track::-webkit-slider-thumb {
   background-color: red;
 }
+.delBtn {
+  transition: all 0.2s ease-in-out;
+}
+.delBtn:hover {
+  scale: 1.2;
+  color: rgb(231, 52, 52);
+}

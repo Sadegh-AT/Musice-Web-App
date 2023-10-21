@@ -44,7 +44,11 @@ const storage = multer.diskStorage({
     const day = date.getDate().toString();
     const ext = path.extname(file.originalname);
 
-    const basename = path.parse(file.originalname).name;
+    const basename = path
+      .parse(file.originalname)
+      .name.trim()
+      .replace(" ", "-");
+
     const fileName = `${basename}-${year}-${month}-${day}-${new Date().getTime()}${ext}`;
     req.body.fileName = fileName;
     cb(null, fileName);
