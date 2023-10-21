@@ -6,12 +6,14 @@ const { MusicModel } = require("../model/music.model");
 async function createMusic(req, res, next) {
   try {
     const { title, fileUploadPath, fileName, time, size } = req.body;
+    console.log(title, fileUploadPath, fileName, time, size);
     await MusicModel.create({
       title,
       size,
       musicPath: path.join(fileUploadPath, fileName),
     });
-    res.send({ message: "Added music 👍" });
+    // res.redirect("/dashboard");
+    // // res.send({ message: "Added music 👍" });
   } catch (error) {
     next(error);
   }

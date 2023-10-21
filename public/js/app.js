@@ -1,6 +1,14 @@
 const darkmodeBtn = document.querySelector("#darkmodeBtn");
 const fonticon = darkmodeBtn.querySelector("span");
-
+const modalOpen = document.getElementById("modalOpen");
+const modalClose = document.getElementById("modalClose");
+const modal = document.querySelector(".modal");
+modalOpen.addEventListener("click", () => {
+  modal.classList.add("active");
+});
+modalClose.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
 SetDarkorLight();
 Darkmode(darkmodeBtn);
 function Darkmode(darkmode) {
@@ -53,4 +61,15 @@ function selectMusic(element) {
   // console.log(element.dataset.src);
   audioPlayer.src = `../${element.dataset.src}`;
   playAndPause();
+}
+
+function markFormSubmitted() {
+  // When the form is submitted successfully, set the hidden field to "true"
+  document.getElementById("formSubmitted").value = "true";
+}
+
+// Check if the form was successfully submitted and redirect if needed
+if (document.getElementById("formSubmitted").value === "true") {
+  // Redirect to the main page or the URL of your choice
+  window.location.href = "index.html";
 }

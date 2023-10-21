@@ -11,12 +11,35 @@
 
 <body class="flex h-[100vh] transition-all justify-center overflow-hidden dark:bg-[#e4e4e4] bg-[#1f1f1f]">
     <div
-        class="container flex max-h-[100vh] max-w-[50rem] dark:shadow-md dark:bg-[#F3F3F3] flex-col justify-start overflow-y-auto overflow-x-hidden bg-[#262626]">
-        <header class="relative flex h-[20rem] flex-col items-start p-4">
-            <div id="darkmodeBtn"
-                class="dark:bg-[#F3F3F3] absolute top-4 right-2 transition-all flex h-10 w-10 cursor-pointer z-10 items-center justify-center rounded-xl bg-[#252525] text-[#fe971f] shadow-lg hover:rounded-2xl">
-                <span></span>
+        class="container relative flex max-h-[100vh] max-w-[50rem] dark:shadow-md dark:bg-[#F3F3F3] flex-col justify-start overflow-y-auto overflow-x-hidden bg-[#262626]">
+        <div class="modal ">
+            <div id="modalClose"
+                class="dark:bg-[#F3F3F3]  top-4 right-2 transition-all flex h-10 w-10 cursor-pointer z-10 items-center justify-center rounded-xl bg-[#252525] text-[#fe971f] shadow-lg hover:rounded-2xl">
+                <i class="fa-solid fa-xmark"></i>
             </div>
+            <form action="http://localhost:3000/music/create" method="POST" enctype="multipart/form-data">
+                <label class="lableText" for="">Title</label>
+                <input type="text" name="title" class="inputText">
+                <label class="lableText" for="">File</label>
+                <input type="file" name="music" class="inputText inputFile">
+                <input type="hidden" id="formSubmitted" name="formSubmitted" value="false">
+
+                <input type="submit" value="Add Music" class="submitBtn">
+            </form>
+        </div>
+        <header class="relative flex h-[20rem] flex-col items-start p-4">
+
+            <div class="hDiv">
+                <div id="darkmodeBtn"
+                    class="dark:bg-[#F3F3F3]  top-4 right-2 transition-all flex h-10 w-10 cursor-pointer z-10 items-center justify-center rounded-xl bg-[#252525] text-[#fe971f] shadow-lg hover:rounded-2xl">
+                    <span></span>
+                </div>
+                <div id="modalOpen"
+                    class="dark:bg-[#F3F3F3]  top-4 right-2 transition-all flex h-10 w-10 cursor-pointer z-10 items-center justify-center rounded-xl bg-[#252525] text-[#fe971f] shadow-lg hover:rounded-2xl">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+
             <h1 id="header-title"
                 class="l z-10 min-w-[20rem] max-w-[55%] font-[outfit] text-[2.6rem] font-extrabold leading-tight text-white drop-shadow-md">
                 DARK SOULS TRILOGY BOX
