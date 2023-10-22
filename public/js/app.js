@@ -40,7 +40,6 @@ function SetDarkorLight() {
 }
 
 const musicTable = document.querySelector("#music-table");
-
 addTrack(musicTable).then(() => {
   const deleteBtn = document.querySelectorAll(".delBtn");
   deleteBtn.forEach((item) =>
@@ -58,9 +57,7 @@ addTrack(musicTable).then(() => {
 });
 
 function selectMusic(element) {
-  // console.log(element.dataset.src);
-  audioPlayer.src = `../${element.dataset.src}`;
-  playAndPause();
+  createAndReplaceAudio(`../${element.dataset.src}`);
 }
 
 function markFormSubmitted() {
@@ -73,3 +70,17 @@ if (document.getElementById("formSubmitted").value === "true") {
   // Redirect to the main page or the URL of your choice
   window.location.href = "index.html";
 }
+
+// Function to create a new Audio element and remove the previous one
+function createAndReplaceAudio(newAudioSrc) {
+  const previousAudio = document.querySelector("audio");
+
+  if (previousAudio) {
+    previousAudio.pause();
+    previousAudio.remove();
+  }
+
+  audioPlayer(newAudioSrc);
+}
+
+// Example: Create a new Audio element with a different source and remove the previous one

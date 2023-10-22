@@ -32,8 +32,6 @@ async function streamMusic(req, res, next) {
   try {
     const { id } = req.params;
     const range = req.headers.range;
-    if (!range) throw createError.NotFound("Range not provided");
-
     const music = await MusicModel.findById({ _id: id });
     const musicPath = path.join(
       __dirname,
@@ -42,13 +40,26 @@ async function streamMusic(req, res, next) {
       "public",
       music.musicPath
     );
-    let [start, end] = range.replace(/bytes=/, "").split("-");
-    const chunk = 10 ** 6; // 1mb
-    start = Number(start);
-    end = end ? Number(end) : Math.min();
+    const { size } = fs.statSync(musicPath);
     const readStream = fs.createReadStream(musicPath);
-
-    readStream.pipe(res);
+    if (range) {
+      let [start, end] = range.replace(/bytes=/, "").split("-");
+      start = parseInt(start, 10);
+      end = end ? parseInt(end, 10) : size - 1;
+      res.writeHead(206, {
+        "Content-Range": `bytes ${start}-${end}/${size}`,
+        "Accept-Ranges": "bytes",
+        "Content-Length": start - end + 1,
+        "Content-Type": "audio/mpeg",
+      });
+      fs.createReadStream(musicPath, { start, end }).pipe(res);
+    } else {
+      res.writeHead(200, {
+        "Content-Length": size,
+        "Content-Type": "audio/mpeg",
+      });
+      readStream.pipe(res);
+    }
   } catch (error) {
     next(error);
   }

@@ -14,8 +14,8 @@ async function addTrack(container) {
       </tr>
       <tr class="flex space-x-8">
           <td>3:45</td>
-          <td>${this.formatFileSize(musics[index].size)}</td>
-          <td>${this.formatFileSize(musics[index].size)}</td>
+          <td>${formatFileSize(musics[index].size)}</td>
+          <td>${formatFileSize(musics[index].size)}</td>
           <td data-id="${
             musics[index]._id
           }" class="delBtn"><i class="fa-solid fa-trash"></i></td>
