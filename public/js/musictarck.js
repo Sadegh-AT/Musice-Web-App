@@ -1,4 +1,6 @@
-async function addTrack(container) {
+const musicTable = document.querySelector("#music-table");
+
+async function addTrack() {
   const res = await fetch("http://localhost:3000/music", { method: "GET" });
   const musics = await res.json();
   console.log(musics);
@@ -21,8 +23,40 @@ async function addTrack(container) {
           }" class="delBtn"><i class="fa-solid fa-trash"></i></td>
       </tr>
   </tbody>`;
-    container.insertAdjacentHTML("beforeend", elementHtml);
+
+    musicTable.insertAdjacentHTML("beforeend", elementHtml);
   }
+  await deleteFunc();
+}
+
+async function deleteFunc() {
+  const deleteBtn = document.querySelectorAll(".delBtn");
+  deleteBtn.forEach((item) => {
+    item.addEventListener("click", async function (e) {
+      e.stopPropagation();
+      await fetch(`http://localhost:3000/music/delete/${item.dataset.id}`, {
+        method: "DELETE",
+      }).then((response) => {
+        if (response.status === 204) {
+          musicTable.innerHTML = `<thead
+          class="dark:text-[#2e2e2e] dark:opacity-75 mb-6 flex w-full justify-between border-b-2 border-solid border-[#454545] pb-2 text-white opacity-40">
+          <tr class="flex space-x-7">
+              <th class="font-light">CD</th>
+              <th class="font-light">#</th>
+              <th class="font-light">Name</th>
+          </tr>
+          <tr class="flex space-x-16">
+              <th class="font-light">Time</th>
+              <th class="font-light">MP3</th>
+              <th class="font-light">FLAC</th>
+              <th class="font-light">Delete</th>
+          </tr>
+      </thead>`;
+          addTrack();
+        }
+      });
+    });
+  });
 }
 function formatFileSize(fileSizeInBytes) {
   if (fileSizeInBytes < 1024) {
