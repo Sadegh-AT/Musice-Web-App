@@ -43,10 +43,11 @@ addTrack();
 
 function selectMusic(element) {
   const a = document.querySelector(".dis");
-  console.log(a);
   if (a) a.classList.remove("dis");
   element.classList.add("dis");
-  createAndReplaceAudio(`../${element.dataset.src}`);
+ 
+  audioPlayer(`http://localhost:3000/music/stream/${element.dataset.id}`);
+  // createAndReplaceAudio(`../${element.dataset.src}`);
 }
 
 function markFormSubmitted() {

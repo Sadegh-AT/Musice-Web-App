@@ -134,6 +134,11 @@ audio {
   background-color: #1f1f1f;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.226);
 }
+.audio-player.dis {
+  opacity: 0.5;
+  user-select: none;
+  pointer-events: none;
+}
 .msuicTrack.dis {
   pointer-events: none;
   user-select: none;

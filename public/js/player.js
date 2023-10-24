@@ -1,18 +1,23 @@
 function audioPlayer(audioSrc) {
   const audioPlayer = document.querySelector(".audio-player");
-
+  audioPlayer.classList.remove("dis");
   const playBtn = document.getElementById("play");
   const btnIcon = playBtn.querySelector("i");
+  const volumeEl = audioPlayer.querySelector("#volume");
+  const volumeIcon = volumeEl.querySelector("i");
 
-  const audio = new Audio(audioSrc);
-  console.log(delete audio);
+  const audio = document.querySelector("#myAudio");
+
+  audio.src = audioSrc;
+
   audio.addEventListener(
     "loadeddata",
     () => {
       audioPlayer.querySelector("#song-duration").textContent =
         getTimeCodeFromNum(audio.duration);
       audio.volume = 0.75;
-      console.log("21123asd");
+      playAudio(audio, btnIcon);
+      volumeAudio(audio, volumeIcon);
     },
     false
   );
@@ -53,12 +58,12 @@ function audioPlayer(audioSrc) {
     },
     false
   );
-  const volumeEl = audioPlayer.querySelector("#volume");
-  const volumeIcon = volumeEl.querySelector("i");
+
   volumeEl.addEventListener("click", () => {
+    console.log(audio.muted);
     audio.muted = !audio.muted;
+
     if (audio.muted) {
-      console.log(volumeEl);
       volumeIcon.classList = "fa-solid fa-volume-xmark";
     } else {
       volumeIcon.classList = "fa-solid fa-volume-high";
@@ -82,4 +87,13 @@ function getTimeCodeFromNum(num) {
   return `${String(hours).padStart(2, 0)}:${minutes}:${String(
     seconds % 60
   ).padStart(2, 0)}`;
+}
+
+function playAudio(audio, btnIcon) {
+  btnIcon.className = "fa-solid fa-pause";
+  audio.play();
+}
+function volumeAudio(audio, volumeIcon) {
+  audio.muted = false;
+  volumeIcon.classList = "fa-solid fa-volume-high";
 }

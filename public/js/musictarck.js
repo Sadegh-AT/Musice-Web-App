@@ -3,9 +3,9 @@ const musicTable = document.querySelector("#music-table");
 async function addTrack() {
   const res = await fetch("http://localhost:3000/music", { method: "GET" });
   const musics = await res.json();
-  console.log(musics);
+
   for (let index = 0; index < musics.length; index++) {
-    let elementHtml = `<tbody  data-src="${
+    let elementHtml = `<tbody data-id="${musics[index]._id}"  data-src="${
       musics[index].musicPath
     }" onclick="selectMusic(this)"
       class="msuicTrack  mb-4 flex w-full cursor-pointer dark:text-[#0C0C0C] dark:hover:bg-[#d4d4d4] dark:border-[#D2D2D2] justify-between rounded-lg border-2 border-[#404040] p-2 text-white opacity-80 transition-all hover:bg-[#3e3e3e]">
