@@ -1119,6 +1119,14 @@ audio {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.226);
 }
 
+.msuicTrack.dis {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #ffffff27;
+}
+
 .hover\:rounded-2xl:hover {
   border-radius: 1rem;
 }

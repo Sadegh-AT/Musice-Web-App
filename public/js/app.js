@@ -59,6 +59,9 @@ addTrack(musicTable).then(() => {
 });
 
 function selectMusic(element) {
+  const a = document.querySelector("dis");
+  if (a) a.classList.remove("dis");
+  element.classList.add("dis");
   createAndReplaceAudio(`../${element.dataset.src}`);
 }
 

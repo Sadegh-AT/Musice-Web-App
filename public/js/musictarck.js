@@ -6,7 +6,7 @@ async function addTrack(container) {
     let elementHtml = `<tbody  data-src="${
       musics[index].musicPath
     }" onclick="selectMusic(this)"
-      class="mb-4 flex w-full cursor-pointer dark:text-[#0C0C0C] dark:hover:bg-[#d4d4d4] dark:border-[#D2D2D2] justify-between rounded-lg border-2 border-[#404040] p-2 text-white opacity-80 transition-all hover:bg-[#3e3e3e]">
+      class="msuicTrack  mb-4 flex w-full cursor-pointer dark:text-[#0C0C0C] dark:hover:bg-[#d4d4d4] dark:border-[#D2D2D2] justify-between rounded-lg border-2 border-[#404040] p-2 text-white opacity-80 transition-all hover:bg-[#3e3e3e]">
       <tr class="flex space-x-7">
           <td>1</td>
           <td>${index + 1}</td>
