@@ -19,7 +19,13 @@ function createRoute(req) {
 }
 const fileFilter = (req, file, cb) => {
   // Allowed audio file types
-  const allowedMimeTypes = ["audio/mpeg", "audio/wav", "audio/x-m4a"];
+  console.log(file.mimetype);
+  const allowedMimeTypes = [
+    "audio/mpeg",
+    "audio/wav",
+    "audio/x-m4a",
+    "audio/flac",
+  ];
 
   if (allowedMimeTypes.includes(file.mimetype)) {
     cb(null, true);
@@ -38,6 +44,7 @@ const storage = multer.diskStorage({
     cb(null, filePath);
   },
   filename: (req, file, cb) => {
+    req.body.orgName = path.parse(file.originalname).name;
     const date = new Date();
     const year = date.getFullYear().toString();
     const month = (date.getMonth() + 1).toString();

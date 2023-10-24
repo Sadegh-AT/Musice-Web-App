@@ -5,10 +5,11 @@ const { MusicModel } = require("../model/music.model");
 
 async function createMusic(req, res, next) {
   try {
-    const { title, fileUploadPath, fileName, time, size } = req.body;
-    console.log(title, fileUploadPath, fileName, time, size);
+    console.log(req.body);
+    const { title, fileUploadPath, fileName, time, size, orgName } = req.body;
+
     await MusicModel.create({
-      title,
+      title: title ? title : orgName,
       size,
       musicPath: path.join(fileUploadPath, fileName),
     });
@@ -71,7 +72,7 @@ async function deleteMusic(req, res, next) {
     const music = await MusicModel.findOneAndDelete({ _id: id });
     let musicPath = path.join(__dirname, "..", "..", "public", music.musicPath);
     fs.unlinkSync(musicPath);
-    
+
     res.status(204).end();
   } catch (error) {
     next(error);
