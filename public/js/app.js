@@ -43,15 +43,17 @@ const musicTable = document.querySelector("#music-table");
 addTrack(musicTable).then(() => {
   const deleteBtn = document.querySelectorAll(".delBtn");
   deleteBtn.forEach((item) =>
-    item.addEventListener("click", async function () {
-      const res = await fetch(
-        `http://localhost:3000/music/delete/${item.dataset.id}`,
-        {
-          method: "DELETE",
+    item.addEventListener("click", async function (e) {
+      e.stopPropagation();
+      await fetch(`http://localhost:3000/music/delete/${item.dataset.id}`, {
+        method: "DELETE",
+      }).then((response) => {
+        if (response.status === 204) {
+          // The server should respond with a 204 No Content status upon successful deletion.
+          // After receiving a successful response, you can use JavaScript to redirect the client with a different method.
+          window.location.href = "http://localhost:3000"; // Redirect the client to '/new-url'
         }
-      );
-      const message = await res.json();
-      console.log(message);
+      });
     })
   );
 });

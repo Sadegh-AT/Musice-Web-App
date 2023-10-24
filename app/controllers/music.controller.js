@@ -12,8 +12,8 @@ async function createMusic(req, res, next) {
       size,
       musicPath: path.join(fileUploadPath, fileName),
     });
-    // res.redirect("/dashboard");
-    // // res.send({ message: "Added music 👍" });
+    const referringUrl = req.headers.referer || "http://localhost:3000";
+    res.redirect(referringUrl);
   } catch (error) {
     next(error);
   }
@@ -70,8 +70,9 @@ async function deleteMusic(req, res, next) {
     if (!id) throw createError.BadRequest("Music not Found");
     const music = await MusicModel.findOneAndDelete({ _id: id });
     let musicPath = path.join(__dirname, "..", "..", "public", music.musicPath);
-    const s = fs.unlinkSync(musicPath);
-    res.send({ message: "Delete Successfully" });
+    fs.unlinkSync(musicPath);
+    
+    res.status(204).end();
   } catch (error) {
     next(error);
   }

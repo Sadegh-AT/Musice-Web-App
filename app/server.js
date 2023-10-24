@@ -16,8 +16,7 @@ class Application {
     this.errorHandler();
   }
   configServer() {
-    app.use(express.static(path.join(__dirname, "public")));
-    app.use(cors());
+    app.use(express.static(path.join(__dirname, "..", "public")));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
     app.use(morgan("dev"));
@@ -35,7 +34,7 @@ class Application {
 
   createRoutes() {
     app.get("/", (req, res) => {
-      res.send("s");
+      res.sendFile(path.join(__dirname, "..", "public", "index.html"));
     });
     app.use(AllRoutes);
   }
