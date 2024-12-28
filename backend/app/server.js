@@ -3,15 +3,14 @@ const morgan = require("morgan");
 const cors = require("cors");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const multer = require("multer");
-const upload = multer();
+
 const {
   connectToMongo,
   disconnectFromMongo,
-} = require("./utils/mongoose.connection");
-const { AllRoutes } = require("./routers/routes");
+} = require("./utils/monoose.connection");
+const { AllRoutes } = require("./routes/routes");
 const { NotFoundError, ErrorHandler } = require("./utils/error-handler");
-const { AuthorizationGuard } = require("./middleware/auth.guard");
+
 require("dotenv").config();
 class Application {
   constructor(PORT, DB_URL, REDIS_URL) {

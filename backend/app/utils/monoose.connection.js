@@ -6,7 +6,7 @@ async function connectToMongo(DB_URL, retries = 0) {
   try {
     const uri = `${DB_URL}`;
     await mongoose.connect(uri, {
-      dbName: "music",
+      dbName: "music-web-app",
     });
     console.log(`Connect to MongoDB: ${uri}`);
   } catch (error) {

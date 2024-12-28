@@ -1,8 +1,11 @@
-const { musicRoutes } = require("./music.routes");
+const { MusicRoutes } = require("../modules/music/music.routes");
+
 const router = require("express").Router();
 
-router.use("/music", musicRoutes);
-
+router.use("/music", MusicRoutes);
+router.get("", (req, res) => {
+  res.send({ message: "hi" });
+});
 module.exports = {
   AllRoutes: router,
 };
